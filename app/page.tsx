@@ -40,7 +40,8 @@ function to24(token?: string | null){
   const t = token.trim()
   const m = t.match(/^(\d{1,2})(?::(\d{2}))?\s*([AaPp][Mm])$/)
   if(!m) return null
-  let h = parseInt(m[1], 10), min = parseInt(m[2] || '0', 10)
+  let h = parseInt(m[1], 10)
+  const min = parseInt(m[2] || '0', 10)
   const mer = m[3].toUpperCase()
   if(mer === 'PM' && h !== 12) h += 12
   if(mer === 'AM' && h === 12) h = 0
@@ -147,7 +148,7 @@ export default function Page(): React.ReactElement {
 
       <div className="controls">
         <label>Search <input id="search" value={search} onChange={e => setSearch(e.target.value)} type="text" placeholder="e.g. 4.105 or Visualization" /></label>
-        <label>Sort by: <select id="sort" value={sortBy} onChange={e => setSortBy(e.target.value as any)}><option value="date">Date</option><option value="subject">Subject</option></select></label>
+        <label>Sort by: <select id="sort" value={sortBy} onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSortBy(e.target.value as 'date' | 'subject')}><option value="date">Date</option><option value="subject">Subject</option></select></label>
       </div>
 
       <table id="schedule">
