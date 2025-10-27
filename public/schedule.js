@@ -23,6 +23,8 @@ const events = [
   {subject:"4.641 /\u00A04.644 19th‑Century\u00A0Art: Painting in the Age of Steam",date:"2025-12-15",time:"9 AM–12 PM",instructors:"Kristel Smentek",location:"3‑133"},
   {subject:"SMArchS Thesis Proposal Reviews",date:"2025-12-11",time:"9 AM–5 PM",instructors:"Multi‑faculty",location:"Buildings 3, 7, 9"},
   {subject:"MArch Thesis Reviews",date:"2025-12-18",time:"9 AM–5 PM",instructors:"Multi‑faculty",location:"Media\u00A0Lab, 6th Floor"}
+  {subject:"Architecture Design Studio I",date:"2025-12-09",time:"1 PM–5 PM",instructors:"Cristina Parreno",location:"10-485"}
+
 ];
 
 // ————— Utilities —————
